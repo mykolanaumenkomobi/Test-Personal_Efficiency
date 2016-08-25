@@ -1,0 +1,27 @@
+#body {text-align: center;}
+  h1 {color: ghostwhite;}
+  input {
+  width: 80px;
+  color: black;
+}
+
+#Progress {
+  position: relative;
+  width: 30%;
+  height: 11px;
+  background-color: ghostwhite;
+  border-radius: 6px;
+  margin: auto;
+}
+
+#Bar {
+  width: 1%;
+  position: absolute;
+  height: 100%;
+  background-color: lawngreen;
+  border-radius: 6px;
+}
+
+#input {
+  width: 160px;
+}
