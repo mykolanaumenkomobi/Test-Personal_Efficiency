@@ -1,8 +1,19 @@
-#body {text-align: center;}
-  h1 {color: ghostwhite;}
-  input {
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background-image: url("../img/test_bg.jpg");
+  background-size: 100%;
+}
+
+h1 {
+  color: ghostwhite;
+}
+
+input {
+  padding:5px;
   width: 80px;
   color: black;
+  border-radius: 3px;
 }
 
 #Progress {
