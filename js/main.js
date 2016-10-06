@@ -1,108 +1,111 @@
-var counter=0, i=0, quest=[
-	"Do you read the books?",
-	"Do you study English?",
-	"Do you do the morning exercises?",
-	"Do you go to bed early?"
-    ];
-var questionsNum = quest.length;
+
+var myTest = {};   //  Creating the one global Object.
+
+	myTest.counter = 0;
+	myTest.iteration = 0, 
+	myTest.quest = [
+		"Do you read the books?",
+		"Do you study English?",
+		"Do you do the morning exercises?",
+		"Do you go to bed early?"
+	    ];
 
 function testRun() {
-	var body=document.getElementById("body");     
-	var div=document.getElementById("div");
-	div.innerHTML = quest[i];                       //Вывести вопрос i  
-	var input=document.getElementById("input");
-	document.body.removeChild(input);               //Удалить кнопку "Пройти тест"
-    var buttonYes=document.createElement("input");  //Вставить кнопку Да
-	buttonYes.type = "button";
-	buttonYes.value = "Yes";
-	buttonYes.onclick = pushYes;
-	document.body.appendChild(buttonYes);
-	var buttonNo=document.createElement("input");   //Вставить кнопку Нет    
-	buttonNo.type = "button";
-	buttonNo.value = "No";
-	buttonNo.onclick = pushNo;
-	document.body.appendChild(buttonNo);
+	var body = document.getElementsByTagName("body");     
+	var div = document.getElementById("div");
+		div.innerHTML = myTest.quest [ myTest.iteration ]; //Вывести вопрос iteration  
+	var input = document.getElementById("input");
+		document.body.removeChild(input);               //Удалить кнопку "Пройти тест"
+    var buttonYes = document.createElement("input");    
+		buttonYes.type = "button";
+		buttonYes.value = "Yes";
+		buttonYes.onclick = pushYes;
+		document.body.appendChild(buttonYes);           //Вставить кнопку Да
+	var buttonNo = document.createElement("input");        
+		buttonNo.type = "button";
+		buttonNo.value = "No";
+		buttonNo.onclick = pushNo;
+		document.body.appendChild(buttonNo);            //Вставить кнопку Нет 
 };
 		
-function restartTest(){
-	counter=0;
-	i=0;                                            //Удалить результат
-	testRun();
-	move(i)
-};	 
-
-function displayResult(counter) {
-	if ( counter <= questionsNum/3 )	{
-		var div=document.getElementById("div");
-	   	div.innerHTML = "Your result is : <strong>Bad</strong>";
-	}
-	else if ( counter < questionsNum ) {
-		var div=document.getElementById("div");
-	   	div.innerHTML = "Your result is : <strong>Good</strong>";
-	}
-	else {
-		var div=document.getElementById("div");
-	   	div.innerHTML = "Your result is : <strong>Excelent</strong>";
-	};
-	removeLastChild();                                 //Удалить кнопки Нет   
-    removeLastChild();                                 //Удалить кнопки Да   
-	var buttonRestart=document.createElement("input"); //Вставить кнопку Повторить тест
-    buttonRestart.type = "button";
-	buttonRestart.value = "Pass the test once again";
-	buttonRestart.style="width: 160px";
-	buttonRestart.id = "input";
-	buttonRestart.onclick = restartTest;
-	document.body.appendChild(buttonRestart);	
-};
-
 function removeLastChild() {
     var body = document.getElementById("body");
     var buttonRej = body.lastChild;
-    if (buttonRej != null) {
-         body.removeChild(buttonRej);       // удаление выбранного элемета из DOM дерева.
-    };
+	    if (buttonRej != null) {
+	         body.removeChild(buttonRej);       // удаление выбранного элемета из DOM дерева.
+	    };
 };	
 
-function pushYes() {
-	counter=counter+1;    
-    i=i+1;
-	if (i<questionsNum) {     	  
+function pushYes () {
+	myTest.counter += 1;    
+    myTest.iteration += 1;
+	if ( myTest.iteration < myTest.quest.length ) {     	  
 	    var div=document.getElementById("div");
-	    div.innerHTML = quest[i];           //Вывести вопрос i	
-	    move(i)
+		    div.innerHTML = myTest.quest [myTest.iteration];           //Вывести вопрос iteration	
+		    move (myTest.iteration);
 	}
 	else {
-      displayResult(counter);               //Вывести кнопку Повторить тест
-	  move(i);
+      displayResult ( myTest.counter );               //Вывести кнопку Повторить тест
+	  move ( myTest.iteration );
 	}
 };	  
 
-function pushNo() {
-	i=i+1;
-	if(i<questionsNum){                     //Вывести вопрос i
-	   var div=document.getElementById("div");
-	   div.innerHTML = quest[i];
-	   move(i);
+function pushNo () {
+	myTest.iteration += 1;
+	if ( myTest.iteration < myTest.quest.length ){                    //Вывести вопрос iteration
+	   var div = document.getElementById("div");
+		   div.innerHTML = myTest.quest[myTest.iteration ];
+		   move (myTest.iteration);
 	   }
 	else {                                  //Вывести кнопку Повторить тест
-	  displayResult(counter);
-	  move(i);
-    }    
+	  displayResult ( myTest.counter );
+	  move ( myTest.iteration );
+    }   
+};
+	 
+function displayResult() {
+	if ( myTest.counter <= myTest.quest.length/3 )	{
+		var div=document.getElementById("div");
+	   		div.innerHTML = "Your result is : <strong>Bad</strong>";
+	}
+	else if ( myTest.counter < myTest.quest.length ) {
+		var div = document.getElementById("div");
+	   		div.innerHTML = "Your result is : <strong>Good</strong>";
+	}
+	else {
+		var div = document.getElementById("div");
+	   		div.innerHTML = "Your result is : <strong>Excelent</strong>";
+	};
+	removeLastChild();                                   //Удалить кнопки Нет   
+    removeLastChild();                                   //Удалить кнопки Да   
+	var buttonRestart = document.createElement("input"); //Вставить кнопку Повторить тест
+	    buttonRestart.type = "button";
+		buttonRestart.value = "Pass the test once again";
+		buttonRestart.id = "input";
+		buttonRestart.onclick = restartTest;
+		document.body.appendChild(buttonRestart);	
 };
 
-function move(i) {                          //ProgressBar
-    var stop=i*100/(questionsNum);
+function move () {                          //ProgressBar
+    var stop = myTest.iteration *100/(myTest.quest.length);
 	var elem = document.getElementById("Bar"); 
-    var width = (i-1)*100/(questionsNum);
-    if(i==0){var sett=0}
-	  else {var sett=12}
+    var width = (myTest.iteration - 1) * 100 / (myTest.quest.length);
+    if(myTest.iteration ==0){var sett = 0}
+	  else {var sett = 12}
 	var id = setInterval(frame, sett);
     function frame() {
        if (width >= stop) {
            clearInterval(id);
        } else {
-           width++; 
+           width ++; 
            elem.style.width = width + '%'; 
        }
     };
+};
+
+function restartTest(){
+	myTest.counter = 0;
+	myTest.iteration = 0;                                            //Удалить результат
+	testRun();
+	move(myTest.iteration)
 };
