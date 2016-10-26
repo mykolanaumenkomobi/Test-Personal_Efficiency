@@ -1,6 +1,6 @@
- //  Creating the One global Object.
-var myTest = {                            
+//  Creating the One global Object.
 
+var myTest = {   
 	counter: 0,
 	iteration: 0, 
 	quest: [
@@ -72,3 +72,9 @@ function restartTest(){
 	testRun();
 	move(myTest.quest.length, myTest.iteration)
 };
+
+
+
+
+
+
