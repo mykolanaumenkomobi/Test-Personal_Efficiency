@@ -1,6 +1,7 @@
 function displayResult() {
 	if ( myTest.counter <= myTest.quest.length/3 )	{
 		var div=document.getElementById("div");
+		    div.className = "big";
 	   		div.innerHTML = "Your result is : <strong>Bad</strong>";
 	}
 	else if ( myTest.counter < myTest.quest.length ) {
@@ -10,6 +11,7 @@ function displayResult() {
 	}
 	else {
 		var div = document.getElementById("div");
+		    div.className = "big";
 	   		div.innerHTML = "Your result is : <strong>Excelent</strong>";
 	};
 	removeLastChild();                                   //Удалить кнопки Нет   
