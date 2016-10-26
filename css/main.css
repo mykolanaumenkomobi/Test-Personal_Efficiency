@@ -1,12 +1,22 @@
 body {
+  position: static;
   font-family: 'Poppins', sans-serif;
+  font-size: 15pt;
   text-align: center;
   background-image: url("../img/test_bg.jpg");
-  background-size: 100%;
+  background-size: 150%;
 }
 
 h1 {
   color: ghostwhite;
+}
+
+div.big {
+  font-size: 20pt;
+}
+
+div.normal {
+  font-size: 15pt;
 }
 
 input {
@@ -35,4 +45,9 @@ input {
 
 #input {
   width: 160px;
+}
+
+input:hover {
+  border-color: green;
+  cursor: pointer;
 }
