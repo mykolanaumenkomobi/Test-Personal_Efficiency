@@ -48,6 +48,6 @@ input {
 }
 
 input:hover {
-  border-color: green;
+  border-color: brown;
   cursor: pointer;
 }
