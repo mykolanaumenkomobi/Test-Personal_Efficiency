@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
+
+
 body {
   position: static;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Quicksand', sans-serif;;
   font-size: 15pt;
   text-align: center;
   background-image: url("../img/test_bg.jpg");
@@ -8,28 +11,33 @@ body {
   color: #001a1a;
 }
 
-h1 {
-  color: ghostwhite;
-}
-
-div.big {
+#div {
   font-size: 20pt;
 }
 
+h1 {
+  color: #ffffe6;
+}
+
+div.big {
+  font-size: 22pt;
+}
+
 div.normal {
-  font-size: 15pt;
+  font-size: 22pt;
 }
 
 input {
+  font-size: 10pt;
+
   padding:5px;
   width: 80px;
   color: #001a1a;
-  border-radius: 3px; 
   box-shadow: none;
 }
 
 input[type=range]:focus {
-    outline: none;
+  outline: none;
 }
 
 #Progress {
