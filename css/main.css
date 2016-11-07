@@ -7,7 +7,7 @@ body {
   text-align: center;
   background-image: url("../img/test_bg.jpg");
   background-size: 150%;
-  color: #FFFFFF;
+  color: black;
 }
 
 #div {
@@ -28,7 +28,6 @@ div.normal {
 
 input {
   font-size: 10pt;
-
   padding:5px;
   width: 80px;
   color: #001a1a;
