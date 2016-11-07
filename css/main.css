@@ -5,6 +5,7 @@ body {
   text-align: center;
   background-image: url("../img/test_bg.jpg");
   background-size: 150%;
+  color: #001a1a;
 }
 
 h1 {
@@ -22,16 +23,21 @@ div.normal {
 input {
   padding:5px;
   width: 80px;
-  color: black;
-  border-radius: 3px;
+  color: #001a1a;
+  border-radius: 3px; 
+  box-shadow: none;
+}
+
+input[type=range]:focus {
+    outline: none;
 }
 
 #Progress {
   position: relative;
   width: 30%;
-  height: 11px;
-  background-color: ghostwhite;
-  border-radius: 6px;
+  height: 4px;
+  background-color: #ffffe6;
+  border-radius: 2px;
   margin: auto;
 }
 
@@ -48,6 +54,6 @@ input {
 }
 
 input:hover {
-  border-color: brown;
+  border-color: #008080;
   cursor: pointer;
 }
