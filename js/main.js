@@ -46,7 +46,8 @@ function pushYes () {
 	myTest.counter += 1;    
     myTest.iteration += 1;
 	if ( myTest.iteration < myTest.quest.length ) {     	  
-	    var div=document.getElementById("div");                 //Вывести вопрос iteration			    
+	    var div=document.getElementById("div");   
+		div.innerHTML = myTest.quest[myTest.iteration ]; //Вывести вопрос iteration			    
 	}
 	else {
       displayResult (myTest.quest, myTest.counter);             //Вывести кнопку Повторить тест
