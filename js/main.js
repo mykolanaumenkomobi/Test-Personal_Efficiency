@@ -1,6 +1,5 @@
-//  Creating the One global Object.
+var myTest = {   //  Creating the One global Object.
 
-var myTest = {   
 	counter: 0,
 	iteration: 0, 
 	quest: [
@@ -13,7 +12,6 @@ var myTest = {
 
 function testRun() {
     var body = document.getElementsByTagName("body");     
-    console.log(body);
 	var div = document.getElementById("div");
 	    div.className = 'normal';
 		div.innerHTML = myTest.quest [ myTest.iteration ]; //Вывести вопрос iteration  
@@ -24,13 +22,15 @@ function testRun() {
     var buttonYes = document.createElement("input");    
 		buttonYes.type = "button";
 		buttonYes.value = "Yes";
-		buttonYes.onclick = pushYes;
+		buttonYes.onclick = pushYes; 
+		buttonYes.style = "border-top-left-radius: 7px; border-bottom-left-radius: 7px;"
 		document.body.appendChild(buttonYes);           //Вставить кнопку Да
 
 	var buttonNo = document.createElement("input");        
 		buttonNo.type = "button";
 		buttonNo.value = "No";
 		buttonNo.onclick = pushNo;
+		buttonNo.style = "border-top-right-radius: 7px; border-bottom-right-radius: 7px;"
 		document.body.appendChild(buttonNo);            //Вставить кнопку Нет 
 };
 		
@@ -46,8 +46,8 @@ function pushYes () {
 	myTest.counter += 1;    
     myTest.iteration += 1;
 	if ( myTest.iteration < myTest.quest.length ) {     	  
-	    var div=document.getElementById("div");   
-		div.innerHTML = myTest.quest[myTest.iteration ]; //Вывести вопрос iteration			    
+	    var div=document.getElementById("div");  
+	    	div.innerHTML = myTest.quest[myTest.iteration ];    //Вывести вопрос iteration			    
 	}
 	else {
       displayResult (myTest.quest, myTest.counter);             //Вывести кнопку Повторить тест
@@ -73,9 +73,3 @@ function restartTest(){
 	testRun();
 	move(myTest.quest.length, myTest.iteration)
 };
-
-
-
-
-
-
