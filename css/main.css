@@ -28,10 +28,11 @@ div.normal {
 
 input {
   font-size: 10pt;
-  padding:5px;
+  padding: 5px;
   width: 80px;
   color: #001a1a;
   box-shadow: none;
+  border-radius: 2px;
 }
 
 input[type=range]:focus {
@@ -52,7 +53,7 @@ input[type=range]:focus {
   position: absolute;
   height: 100%;
   background-color: lawngreen;
-  border-radius: 6px;
+  border-radius: 2px;
 }
 
 #input {
