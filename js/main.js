@@ -11,7 +11,7 @@ var myTest = {   //  Creating the One global Object.
 	    ]
 };
 
-testRun();
+testRun(iteration);
 
 function pushYes () {
 	myTest.counter += 1;    
@@ -28,4 +28,10 @@ function restartTest(){
 	myTest.iteration = 0;                                            //Удалить результат
 	testRun();
 	
+};
+
+function settings () {
+	if (this.value = "on") {
+		console.log("Ok!");
+	}
 };
