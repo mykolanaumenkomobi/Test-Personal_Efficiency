@@ -14,7 +14,7 @@ function displayResult() {
 	};
 
 	removeLastChild();                                   //Удалить кнопки Нет  из DOM 
-        removeLastChild();                                   //Удалить кнопки Да   из DOM
+    removeLastChild();                                   //Удалить кнопки Да   из DOM
     
 	var buttonRestart = document.createElement("input"); //Вставить кнопку Повторить тест
 	    buttonRestart.type = "button";
@@ -23,3 +23,8 @@ function displayResult() {
 		buttonRestart.onclick = restartTest;
 		document.body.appendChild(buttonRestart);	
 }
+
+
+
+
+
