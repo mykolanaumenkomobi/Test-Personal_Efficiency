@@ -1,4 +1,3 @@
-
 function removeLastChild() {
 
     var body = document.getElementById("body"),
