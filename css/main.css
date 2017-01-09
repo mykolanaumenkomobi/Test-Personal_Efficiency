@@ -1,42 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400');
 
 body {
-  position: static;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 15pt;
-  text-align: center;
-  background-image: url("../img/test_bg.jpg");
-  background-size: 150%;
-  color: black;
+    position: static;
+    font-family: 'Quicksand', sans-serif;
+    color: black;
+    text-align: center;
+    background-image: url("../img/test_bg.jpg");
+    background-size: 150%;
 }
 
-#div {
-  font-size: 20pt;
+.container {
+    position: relative;
+    top: 30px;
 }
 
-h1 {
+.button {
+    height: 32px;
+    color: #001a1a;
+    font-size: 13pt;
+    box-shadow: none;
+    border-radius: 4px;
+}
+
+.big {
+    width: 160px;  
+}
+
+.control {    
+    width: 80px;    
+}
+
+.head {
+  font-size: 30pt;
   color: #ffffe6;
 }
 
-div.big {
-  font-size: 22pt;
+#message {  
+    font-size: 20pt;
 }
 
-div.normal {
-  font-size: 22pt;
-}
-
-input {
-  font-size: 10pt;
-  height: 32px;
-  color: #001a1a;
-  box-shadow: none;
-  border-radius: 16px;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
 
 #Progress {
   position: relative;
@@ -55,11 +57,10 @@ input[type=range]:focus {
   border-radius: 2px;
 }
 
-#input {
-  width: 160px;
-}
-
 input:hover {
-  border-color: #008080;
+  border-top-color: #008080;
+  border-right-color: #008080;
+  border-left-color:  #ffffe6;
+  border-bottom-color:  #ffffe6;
   cursor: pointer;
 }
