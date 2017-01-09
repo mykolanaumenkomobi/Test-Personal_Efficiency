@@ -5,20 +5,19 @@
 	<title>Test: personal efficiency</title>
 	<link href="css/main.css" rel="stylesheet">
 </head>
-<body id='body'>
-    	<h1>Evaluate your personal efficiency</h1></br> 
-	<div id="div">Welcome</div></br>
-	<div id="Progress">
-	     <div id="Bar"></div>
-	</div></br>
-	<input id="input" type="button" value="Start the Test" onclick="testRun()" />
-<script src="js/main.js"></script>
-<script src="js/displayResult.js"></script>        
-<script src="js/testRun.js"></script>
-        <script src="js/removeLastChild.js"></script>
-        <script src="js/progressBar.js"></script>
-  	<script src="js/questChange.js"></script>
-		
-        
+<body>
+	<div class="container" id="container">
+		<div class="head">Evaluate your personal efficiency</div></br> 
+		<div id="message">Welcome</div><br />
+		<div id="Progress">
+		     <div id="Bar"></div>
+		</div></br>
+		<input type="button" id="buttonInit" class="big button" value="Start the Test"/>
+	</div>
+    
+
+  	<script src="js/progressBar.js"></script>
+  	<script src="js/main.js"></script>
+	
 </body>
 </html>
