@@ -23,7 +23,7 @@ body {
   box-shadow: none;
   border-radius: 5px;
   border-width: 1.0px;
-  border-color: #0077b3; 
+  border-color: #0077b3  !important; 
 }
 
 .big {
@@ -35,10 +35,11 @@ body {
 }
 
 .button:hover {
-  background-color: #006699;
+  background-color: #006699 !important;
   border-width: 1.0px;
   border-color: #00334d;
   cursor: pointer;
+
 }
 
 .head {
