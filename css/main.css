@@ -17,6 +17,7 @@ body {
 .button {
   background-color: #0077b3;
   color: white;
+  margin: 1px;  
   width: 160px;
   height: 34px;
   font-size: 11pt;
