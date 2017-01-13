@@ -39,7 +39,10 @@ body {
   border-width: 1.0px;
   border-color: #00334d;
   cursor: pointer;
-
+   border-top-color:  #006699;
+  border-right-color:  #006699;
+  border-left-color:   #006699;
+  border-bottom-color:   #006699;
 }
 
 .head {
