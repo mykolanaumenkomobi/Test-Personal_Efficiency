@@ -34,6 +34,13 @@ body {
     width: 80px;    
 }
 
+.button:hover {
+  background-color: #006699;
+  border-width: 1.0px;
+  border-color: #00334d;
+  cursor: pointer;
+}
+
 .head {
   font-size: 30pt;
   color: #ffffe6;
@@ -61,10 +68,3 @@ body {
   border-radius: 2px;
 }
 
-input:hover {
-  border-top-color: #008080;
-  border-right-color: #008080;
-  border-left-color:  #ffffe6;
-  border-bottom-color:  #ffffe6;
-  cursor: pointer;
-}
