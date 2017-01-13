@@ -15,11 +15,15 @@ body {
 }
 
 .button {
-    height: 32px;
-    color: #001a1a;
-    font-size: 13pt;
-    box-shadow: none;
-    border-radius: 4px;
+  background-color: #0077b3;
+  color: white;
+  width: 160px;
+  height: 34px;
+  font-size: 11pt;
+  box-shadow: none;
+  border-radius: 5px;
+  border-width: 1.0px;
+  border-color: #0077b3; 
 }
 
 .big {
