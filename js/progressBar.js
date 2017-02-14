@@ -27,7 +27,7 @@ function move (iteration, lengthArr) {
            }
         };
     } else { 
-      console.log(width);
+     // console.log(width);
            var id = setInterval ( back, 120);
            function back () {
                if (width > stop) {
