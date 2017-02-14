@@ -40,13 +40,13 @@ function initDomElement () {
 };
 
 Module.container = $("container");
-console.log(Module.div);
+//console.log(Module.div);
 
 
 function goTest () {
 
-	console.log("counter "+ Module.counter);
-    console.log ("step "+ Module.step);
+	//console.log("counter "+ Module.counter);
+    //console.log ("step "+ Module.step);
 	if (Module.step == 0) {       
 		//console.log("Module.step == 0");                 
 		container.removeChild(Module.button);
